@@ -105,11 +105,11 @@ void sortedInsert(struct Node** head_ref, struct Node* new_node)
 		tail = tail->next;
 	}
 
-	if( new_node->data < head->data)
+	if( new_node->data <= head->data)
 	{
 		push_front(head_ref, new_node->data);
 
-	} else if(new_node->data > tail->data)
+	} else if(new_node->data >= tail->data)
 	{
 		push_back(head_ref, new_node->data);
 	} else
@@ -119,7 +119,7 @@ void sortedInsert(struct Node** head_ref, struct Node* new_node)
 			prev = current;
 			current = current->next;
 
-			if(new_node->data > prev->data && new_node->data < current->data)
+			if(new_node->data >= prev->data && new_node->data < current->data)
 			{
 				prev->next = new_node;
 				new_node->next = current;
@@ -132,6 +132,8 @@ void sortedInsert(struct Node** head_ref, struct Node* new_node)
 
 
 }
+
+
 
 int main()
 {
