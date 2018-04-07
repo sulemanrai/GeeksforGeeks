@@ -27,24 +27,17 @@ Node* modularNode(Node* head, int k)
 	Node * current = head;
 	Node * modularNode = NULL;
 
-	int size = 0;
-	int count = 1;
+	int count = 0;
 
 	while(current != NULL)
 	{
-		size++;
-
-
-		if(size % k == 0 )
+		count++;
+		if(count % k == 0 )
 		{
 			modularNode = current;
-			//current = current->next;
 		}
-
 		current = current->next;
-
 	}
-
 	return modularNode;
 }
 
