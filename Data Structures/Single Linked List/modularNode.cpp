@@ -23,7 +23,7 @@ Node* newNode(int data)
 /* Function to find modular node in the linked list */
 Node* modularNode(Node* head, int k)
 {
-	Node * prev = NULL;
+
 	Node * current = head;
 	Node * modularNode = NULL;
 
