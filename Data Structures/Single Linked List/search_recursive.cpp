@@ -34,7 +34,7 @@ void push(struct Node** head_ref, int new_key)
 bool search(struct Node* head, int x)
 {
 	bool isPresent = false;
-	if(head->next == NULL)
+	if(head == NULL)
 	{
 		return isPresent;
 	}
