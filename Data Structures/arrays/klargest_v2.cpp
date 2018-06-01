@@ -117,7 +117,7 @@ void kthsmallest(int arr[], int n, int k)
 
 int main()
  {
-	//code
+	//cod
 	int T;
 	cin >> T;
 	int arr[1000];
